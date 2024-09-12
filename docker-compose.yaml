@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  live_blog_api_db:
+    image: postgres:latest
+    container_name: live_blog_api_db
+    ports:
+      - '54323:5432'
+    environment:
+      POSTGRES_DB: live_blog_api_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - live_blog_api_db:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  live_blog_api_adminer:
+    image: adminer:latest
+    container_name: 'live_blog_api_adminer'
+    restart: unless-stopped
+    depends_on:
+      - live_blog_api_db
+    ports:
+      - 8881:8080
+
+volumes:
+  live_blog_api_db:
