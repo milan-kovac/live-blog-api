@@ -18,14 +18,12 @@ import { ConfigModule } from '@nestjs/config';
           host: process.env.DB_HOST,
           port: Number(process.env.DB_PORT),
         },
+        migrations: {
+          directory: './src/db/migrations',
+        },
       },
     }),
     PostsModule,
   ],
 })
-export class AppModule {
-  constructor() {
-    console.log('process.env.DB_CLIENT');
-    console.log(process.env.DB_NAME);
-  }
-}
+export class AppModule {}
