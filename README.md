@@ -1,1 +1,27 @@
-# live-blog-api
+***Backend Engineer Assignment***
+
+
+👩‍🚀 **Requirements** 
+---
+
++ Node.js **v20.11.0**
++ Nest.js **v10.3.1**
++ PostgreSQL
++ Docker
+
+
+🚀 **Setup** 
+---
+
+Make sure you are in the root of the project.
+
++ Create **`.env`** file. (You can copy **`.env.example`** file)
++ Run **`docker-compose up -d`**  to set up and start the required services.
++ Run **`npm install`** to install all the dependencies.
++ Run **`migration:latest`** to run migration.
++ Run **`npm run start`** to start server.
+
+## 💻 **Local** 
++ ***[Server](http://[::1]:3001/)***
++ ***[Swagger](http://[::1]:3001/api)***
++ ***[Adminer](http://localhost:8881/)***
