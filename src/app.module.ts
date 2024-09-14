@@ -25,5 +25,6 @@ import { ConfigModule } from '@nestjs/config';
     }),
     PostsModule,
   ],
+  providers: [],
 })
 export class AppModule {}

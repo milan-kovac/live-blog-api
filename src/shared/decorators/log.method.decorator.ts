@@ -10,6 +10,7 @@ export function LogMethod(): MethodDecorator {
       const result = await originalMethod.apply(this, args);
       const endTime = Date.now();
       const executionTime = endTime - startTime;
+
       Logger.debug(`Execution time: ${executionTime}ms`, target.constructor.name);
       return result;
     };
