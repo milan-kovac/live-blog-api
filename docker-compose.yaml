@@ -22,5 +22,12 @@ services:
     ports:
       - 8881:8080
 
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - '6379:6379'
+    restart: unless-stopped
+
 volumes:
   live_blog_api_db:
